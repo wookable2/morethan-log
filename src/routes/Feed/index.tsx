@@ -7,6 +7,7 @@ import styled from "@emotion/styled"
 import TagList from "./TagList"
 import MobileProfileCard from "./MobileProfileCard"
 import ProfileCard from "./ProfileCard"
+import ImageCarousel from "./ImageCarousel" 
 import ServiceCard from "./ServiceCard"
 import ContactCard from "./ContactCard"
 import PostList from "./PostList"
@@ -15,6 +16,20 @@ import PinnedPosts from "./PostList/PinnedPosts"
 const HEADER_HEIGHT = 73
 
 type Props = {}
+
+const carouselImages = [
+  {
+    url: "https://imgur.com/VCJeLbf",
+    link: "https://naver.com",
+    alt: "First slide"
+  },
+  {
+    url: "https://imgur.com/8erSMlc",
+    link: "https://google.com",
+    alt: "Second slide"
+  },
+  // ImagesCarousel - Showcase Images : 필요한 만큼 이미지 이곳에서 추가하면 된다.
+]
 
 const Feed: React.FC<Props> = () => {
   const [q, setQ] = useState("")
@@ -33,6 +48,7 @@ const Feed: React.FC<Props> = () => {
         <MobileProfileCard />
         <PinnedPosts q={q} />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
+		<ImageCarousel images={carouselImages} />
         <div className="tags">
           <TagList />
         </div>
