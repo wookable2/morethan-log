@@ -19,14 +19,14 @@ type Props = {}
 
 const carouselImages = [
   {
-    url: "https://imgur.com/VCJeLbf",
+    url: "https://i.imgur.com/8erSMlc.jpeg",
     link: "https://naver.com",
-    alt: "First slide"
+    alt: "TestingFirst"
   },
   {
-    url: "https://imgur.com/8erSMlc",
+    url: "https://i.imgur.com/VCJeLbf.jpeg",
     link: "https://google.com",
-    alt: "Second slide"
+    alt: "TestingSecond"
   },
   // ImagesCarousel - Showcase Images : 필요한 만큼 이미지 이곳에서 추가하면 된다.
 ]
@@ -47,8 +47,8 @@ const Feed: React.FC<Props> = () => {
       <div className="mid">
         <MobileProfileCard />
         <PinnedPosts q={q} />
-        <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
 		<ImageCarousel images={carouselImages} />
+        <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <div className="tags">
           <TagList />
         </div>

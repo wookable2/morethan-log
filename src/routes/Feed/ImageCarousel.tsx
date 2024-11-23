@@ -14,7 +14,7 @@ interface Props {
 
 const ImageCarousel: React.FC<Props> = ({ 
   images, 
-  intervalTime = 3000 
+  intervalTime = 8000 
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
