@@ -18,7 +18,7 @@ class MyDocument extends Document {
             title="RSS 2.0"
             href="/feed"
           ></link>
-          {/* google search console */}
+          {/* google search console part */}
           {CONFIG.googleSearchConsole.enable === true && (
             <>
               <meta
